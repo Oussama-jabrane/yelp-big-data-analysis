@@ -41,7 +41,7 @@ def build_system_prompt() -> str:
     """
     schema = get_schema_with_examples()
     
-    prompt = f"""You are a MySQL expert. Generate a valid SQL query based on the natural language question.
+    prompt = f"""You are a PostgreSQL expert. Generate a valid SQL query based on the natural language question.
 
 RULES (MANDATORY):
 1. ONLY return the SQL query
@@ -52,7 +52,7 @@ RULES (MANDATORY):
 6. Add LIMIT 100 if not specified
 7. Use ORDER BY for rankings (descending)
 8. Use GROUP BY for aggregations
-9. Ensure valid MySQL syntax
+9. Ensure valid PostgreSQL syntax
 
 DATABASE SCHEMA:
 {schema}
